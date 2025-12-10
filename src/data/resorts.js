@@ -46,5 +46,13 @@ export const fallbackResorts = [
         lifts: { open: 6, total: 27 },
         conditions: 'Early Season / Groomed',
         temp: '30°F'
+    },
+    {
+        id: 'sugarbowl',
+        name: 'Sugar Bowl Resort',
+        status: 'closed',
+        lifts: { open: 0, total: 13 },
+        conditions: 'Rebuilding Snow Coverage',
+        temp: '30°F'
     }
 ];
