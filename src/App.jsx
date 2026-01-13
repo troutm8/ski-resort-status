@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ResortList from './components/ResortList';
+import DodgeRidgeDashboard from './components/DodgeRidgeDashboard';
 
-function App() {
+function HomePage() {
   const headerStyle = {
     textAlign: 'center',
     marginBottom: '3rem',
@@ -45,6 +47,17 @@ function App() {
         <p>&copy; {new Date().getFullYear()} Ski Status CA. Data provided for demonstration purposes.</p>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/dodge-ridge-dashboard" element={<DodgeRidgeDashboard />} />
+      </Routes>
+    </Router>
   );
 }
 

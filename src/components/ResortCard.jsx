@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ResortCard = ({ resort }) => {
     const getStatusColor = (status) => {
@@ -68,6 +69,19 @@ const ResortCard = ({ resort }) => {
         color: 'var(--color-text-primary)'
     };
 
+    const dashboardLinkStyle = {
+        marginTop: '1rem',
+        padding: '0.75rem',
+        backgroundColor: 'var(--color-accent)',
+        color: 'var(--color-bg-main)',
+        textDecoration: 'none',
+        borderRadius: '0.5rem',
+        fontWeight: '600',
+        textAlign: 'center',
+        display: 'block',
+        transition: 'opacity 0.2s',
+    };
+
     return (
         <div
             className="resort-card"
@@ -102,6 +116,18 @@ const ResortCard = ({ resort }) => {
                     <div style={valueStyle}>{resort.temp}</div>
                 </div>
             </div>
+
+            {/* Add dashboard link for Dodge Ridge */}
+            {resort.id === 'dodge-ridge' && (
+                <Link
+                    to="/dodge-ridge-dashboard"
+                    style={dashboardLinkStyle}
+                    onMouseEnter={(e) => e.target.style.opacity = '0.9'}
+                    onMouseLeave={(e) => e.target.style.opacity = '1'}
+                >
+                    View Full Dashboard →
+                </Link>
+            )}
         </div>
     );
 };
