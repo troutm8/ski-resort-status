@@ -2,10 +2,10 @@ export const fallbackResorts = [
     {
         id: 'dodge-ridge',
         name: 'Dodge Ridge Mountain Resort',
-        status: 'closed',
-        lifts: { open: 0, total: 12 },
-        conditions: 'Closed for Season',
-        temp: '--'
+        status: 'open',
+        lifts: { open: 8, total: 12 },
+        conditions: 'Open / Good Conditions',
+        temp: '28°F'
     },
     {
         id: 'bear-valley',
